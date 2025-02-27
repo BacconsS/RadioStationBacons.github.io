@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #ff3366; /* Hot pink for energy */
+    --secondary-color: #1a1a3d; /* Deep blue for a cool base */
+    --accent-color: #00ffcc; /* Neon cyan for pop */
+    --text-color: #ffffff; /* White text for contrast */
+    --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--secondary-color), #2a2a5a); /* Cosmic gradient */
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Home Page Styles */
+.home-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2); /* Subtle overlay */
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.home-container h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+.hero {
+    padding: 5rem 0;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(0, 255, 204, 0.3);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(45deg, var(--primary-color), #ff66cc);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.cta-button:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 25px var(--primary-color), 0 0 35px var(--accent-color);
+}
+
+footer {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+/* Radio Page Styles */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px var(--primary-color);
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#tag-input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 30px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+#tag-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+#search-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#search-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.home-link {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.home-link:hover {
+    color: var(--primary-color);
+}
+
+.station-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#station-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.station-card {
+    background: linear-gradient(135deg, rgba(255, 51, 102, 0.2), rgba(0, 255, 204, 0.2));
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.station-card:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(255, 51, 102, 0.5);
+}
+
+.station-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.station-card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--accent-color);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.favorite-btn.favorited {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.player {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--accent-color);
+}
+
+.player h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+#audio-player {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    background: var(--secondary-color);
+}
+
+#playing-info {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .home-container h1, header h1 {
+        font-size: 2rem;
+    }
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    .search-bar {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    #tag-input, #search-btn {
+        width: 100%;
+    }
+    .home-link {
+        position: static;
+        display: block;
+        margin-top: 1rem;
+    }
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}

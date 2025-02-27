@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Explorer - Stations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Radio Explorer</h1>
+            <div class="search-bar">
+                <input type="text" id="tag-input" placeholder="Search by genre (e.g., rock, jazz)">
+                <button id="search-btn">Go</button>
+            </div>
+            <a href="index.html" class="home-link">Back to Home</a>
+        </header>
+        <section class="station-container">
+            <h2>Stations</h2>
+            <div id="station-grid"></div>
+        </section>
+        <section class="player">
+            <h3>Now Playing</h3>
+            <audio id="audio-player" controls></audio>
+            <span id="playing-info">Select a station to play</span>
+        </section>
+    </div>
+    <div id="spinner" class="spinner hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
